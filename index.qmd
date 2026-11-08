@@ -1,0 +1,126 @@
+---
+title: "Ali Oku"
+subtitle: "Senior Bioinformatics Analyst · New York Genome Center"
+pagetitle: "Ali Oku"
+image: images/headshot.jpg
+image-alt: "Portrait of Ali Oku"
+listing:
+  id: latest-reviews
+  contents: "reviews/*/index.qmd"
+  sort: "date desc"
+  type: custom
+  template: reviews/_listing.ejs
+  max-items: 3
+  date-format: "MMM D, YYYY"
+  fields: [date, title, description, categories, reading-time, verdict]
+about:
+  template: trestles
+  image-width: 14em
+  image-shape: rectangle
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:ali.eastman.oku@gmail.com
+    - icon: github
+      text: GitHub
+      href: https://github.com/Eastmanmd
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ali-eastman-oku/
+    - icon: mortarboard-fill
+      text: Scholar
+      href: https://scholar.google.com/citations?user=gr_Ra7AAAAAJ&hl=en
+    - icon: file-earmark-arrow-down
+      text: CV (PDF)
+      href: files/Ali_Oku_CV.pdf
+---
+
+```{=html}
+<!-- Skills strip: edit the list below. The second copy keeps the loop seamless. -->
+<div class="skill-marquee" id="skill-strip" aria-label="Skills">
+<ul class="track">
+<li>Single-cell foundation models</li>
+<li>Transformers and fine-tuning</li>
+<li>Deep learning (PyTorch)</li>
+<li>Multi-omics integration</li>
+<li>Single-cell and bulk RNA-seq</li>
+<li>Cell-type deconvolution</li>
+<li>Model benchmarking and evaluation</li>
+<li>Representation learning (VAEs)</li>
+<li>Training data curation</li>
+<li>Nextflow and WDL pipelines</li>
+<li>HPC and cloud (AWS, GCP)</li>
+<li>Interactive apps (R Shiny)</li>
+<li>Cancer genomics</li>
+<li>Neurodegeneration (ALS)</li>
+<li>Translational biomarkers</li>
+</ul>
+<ul class="track" aria-hidden="true">
+<li>Single-cell foundation models</li>
+<li>Transformers and fine-tuning</li>
+<li>Deep learning (PyTorch)</li>
+<li>Multi-omics integration</li>
+<li>Single-cell and bulk RNA-seq</li>
+<li>Cell-type deconvolution</li>
+<li>Model benchmarking and evaluation</li>
+<li>Representation learning (VAEs)</li>
+<li>Training data curation</li>
+<li>Nextflow and WDL pipelines</li>
+<li>HPC and cloud (AWS, GCP)</li>
+<li>Interactive apps (R Shiny)</li>
+<li>Cancer genomics</li>
+<li>Neurodegeneration (ALS)</li>
+<li>Translational biomarkers</li>
+</ul>
+</div>
+<script>
+  // Move the strip to sit just under the title and subtitle.
+  document.addEventListener("DOMContentLoaded", function () {
+    var strip = document.getElementById("skill-strip");
+    var subtitle = document.querySelector(".about-entity .subtitle");
+    if (strip && subtitle) subtitle.insertAdjacentElement("afterend", strip);
+  });
+</script>
+```
+
+I'm a Senior Bioinformatics Analyst at the [New York Genome Center](https://www.nygenome.org), working on transcriptomics across cancer, neurodegeneration, and autoimmune disease. I partner with researchers at NYGC and beyond to design studies, analyze data, and bring machine learning into their work.
+
+My current research interests center on what **single-cell foundation models** (scFMs) are actually good for. At NYGC, I helped build [DECONVersation](software.qmd#deconversation) with fellow researchers, a method that uses scFM embeddings to estimate cell-type proportions from bulk RNA-seq.
+
+I lead transcriptomic analysis for the NYGC ALS Consortium, comparing gene expression between ALS and control tissue across the brain and spinal cord, and how it differs in *C9orf72*- and *SOD1*-linked ALS. Beyond ALS, I've helped analyze datasets in breast, prostate, and endometrial cancer, and in autoimmune and inflammatory diseases including rheumatoid arthritis, lupus (SLE), ulcerative colitis, and Crohn's disease.
+
+Before NYGC, I built machine learning models in pharma and academia: a cancer-agnostic tumor-microenvironment classifier linked to survival and immunotherapy response at **EMD Serono**, single-cell and network analyses at **Takeda**, and multi-omic autoencoders at the **Max Delbrück Center**. I hold M.Sc. degrees in Computer Science and Bioinformatics.
+
+I also write [reviews](reviews/index.qmd) of new work in AI and computational biology.
+
+## Selected work
+
+```{=html}
+<div class="work-grid">
+<a class="work-card" href="software.html#deconversation"> <div class="work-kind">Method · Python</div> <div class="work-title">DECONVersation</div> <p class="work-desc">Bulk RNA-seq deconvolution using single-cell foundation model embeddings.</p>
+</a>
+<a class="work-card" href="software.html#als-browser"> <div class="work-kind">App · R Shiny</div> <div class="work-title">ALS Gene Browser</div> <p class="work-desc">Explore NYGC ALS Consortium transcriptomics without writing code.</p>
+</a>
+<a class="work-card" href="software.html#scfm-tracker"> <div class="work-kind">Dashboard</div> <div class="work-title">scFM Tracker</div> <p class="work-desc">Citations, usage, and runnability for every single-cell foundation model.</p>
+</a>
+<a class="work-card" href="software.html#s2f-tracker"> <div class="work-kind">Dashboard</div> <div class="work-title">S2F Tracker</div> <p class="work-desc">Sequence-to-function models compared on one base-pair scale.</p>
+</a>
+</div>
+```
+
+## Focus areas
+
+<span class="tag">Single-cell foundation models</span>
+<span class="tag">Cell-type deconvolution</span>
+<span class="tag">Representation learning</span>
+<span class="tag">Neurodegeneration (ALS)</span>
+<span class="tag">Autoimmune disease</span>
+<span class="tag">Cancer genomics & ancestry</span>
+<span class="tag">Reproducible pipelines</span>
+
+## Reviews
+
+::: {#latest-reviews}
+:::
+
+[All reviews →](reviews/index.qmd)

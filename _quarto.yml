@@ -1,0 +1,68 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - files/Ali_Oku_CV.pdf
+  # Only these files are rendered; source documents (CV, resume, poster files) stay private.
+  render:
+    - index.qmd
+    - research.qmd
+    - software.qmd
+    - publications.qmd
+    - cv.qmd
+    - reviews/index.qmd
+    - reviews/*/index.qmd
+    - 404.qmd
+
+website:
+  title: "Ali Oku"
+  description: "Machine learning for single-cell and bulk transcriptomics. Research, software, and reviews of new work in AI, bioinformatics, and computational biology."
+  site-url: https://eastmanmd.github.io
+  favicon: images/favicon.svg
+  page-navigation: false
+  back-to-top-navigation: true
+  open-graph: true
+  navbar:
+    collapse-below: lg
+    left:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: software.qmd
+        text: Software
+      - href: publications.qmd
+        text: Publications
+      - href: reviews/index.qmd
+        text: Reviews
+    right:
+      - icon: github
+        href: https://github.com/Eastmanmd
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ali-eastman-oku/
+        aria-label: LinkedIn
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=gr_Ra7AAAAAJ&hl=en
+        aria-label: Google Scholar
+      - href: cv.qmd
+        text: CV
+  page-footer:
+    left: "© 2026 Ali Oku"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/theme.scss, styles/light.scss]
+      dark: [cosmo, styles/theme.scss, styles/dark.scss]
+    respect-user-color-scheme: true
+    toc: false
+    highlight-style: github
+    smooth-scroll: true
+    link-external-newwindow: true
+    anchor-sections: false
+
+execute:
+  # Reviews with code are rendered locally; CI reuses the stored results in _freeze/.
+  freeze: auto

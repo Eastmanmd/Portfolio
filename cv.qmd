@@ -1,0 +1,98 @@
+---
+title: "Curriculum Vitae"
+description: "Experience, education, and technical skills."
+---
+
+[New York, NY · [ali.eastman.oku@gmail.com](mailto:ali.eastman.oku@gmail.com) · [Publications](publications.qmd) · [Talks & Posters](publications.qmd#talks)]{.meta}
+
+## Experience
+
+::: {.cv-row}
+**New York Genome Center** · Computational Biology · New York, NY
+[Aug 2023 – present]{.meta}
+:::
+
+[Senior Bioinformatics Analyst, Nov 2026 – present · Bioinformatics Analyst, Aug 2023 – Oct 2026]{.meta}
+
+Transcriptomic analysis and research across cancer, neurodegenerative, and autoimmune disease. I work with researchers at NYGC and partner institutions to design, analyze, and interpret studies, and I help bring machine learning tools into that work.
+
+- Helped build **DECONVersation** at NYGC with fellow researchers, a deconvolution method that uses embeddings from single-cell foundation models (Geneformer, Cell2Sentence, scGPT, scVI) to estimate cell-type proportions from bulk RNA-seq. It matches or outperforms MuSiC, DWLS, and BayesPrism across benchmark datasets. First-author preprint, presented at MLCB 2025.
+- Benchmarked single-cell foundation models against scVI, Harmony, and PCA for dimensionality reduction, batch correction, and representation learning, setting the group's model-selection criteria for single-cell pipelines.
+- Led transcriptomic analysis for the NYGC ALS Consortium: differential expression and cell-type composition across brain and spinal cord regions, linked to genetic and clinical features.
+- Built perturbation-analysis pipelines for CRISPR functional genomics data across HPC (Slurm) and cloud environments.
+- Designed reusable NGS workflows for bulk RNA-seq, scRNA-seq, ATAC-seq, and spatial transcriptomics supporting biomarker discovery and target identification.
+- Established the group's single-cell QC and benchmarking framework, with automated metrics, doublet and ambient-RNA handling, and versioned reference data.
+- Built interactive R Shiny and D3.js applications, including the public [ALS Gene Browser](https://alsbrowser.nygenome.org/), so collaborators can explore results without writing code.
+
+::: {.cv-row}
+**EMD Serono (Merck KGaA)** · Bioinformatics Intern, Machine Learning · Billerica, MA
+[Feb 2023 – Jul 2023]{.meta}
+:::
+
+- Prepared multi-omic data (expression, DNA methylation, somatic mutations, copy number) and built a cancer-agnostic machine learning model to classify the tumor microenvironment into subtypes.
+- Mapped model predictions to clinical variables, including patient survival and response to immunotherapy.
+- Compared XGBoost, random forest, and neural network classifiers with nested cross-validation and SHAP-based interpretation.
+- Delivered model evaluation and documentation covering accuracy, interpretability, and clinical applicability.
+
+::: {.cv-row}
+**Takeda Pharmaceuticals** · Bioinformatics Intern, Computational Oncology · Cambridge, MA
+[May 2022 – Aug 2022]{.meta}
+:::
+
+- Identified colorectal cancer subtype-associated gene modules with WGCNA and characterized their pathway and GO enrichment.
+- Analyzed scRNA-seq and CITE-seq data to quantify drug-treatment effects at single-cell resolution.
+- Developed and validated logistic regression classifiers for colorectal cancer subtypes.
+
+::: {.cv-row}
+**Max Delbrück Center for Molecular Medicine** · Machine Learning Intern · Berlin, Germany
+[May 2021 – Aug 2021]{.meta}
+:::
+
+- Designed a variational autoencoder for joint representation of multi-omic colorectal cancer data (expression, copy number, methylation).
+- Implemented a maximum mean discrepancy (MMD) loss to align distributions across data modalities.
+- Showed that the learned embeddings predict survival and drug response across colorectal cancer subtypes.
+
+::: {.cv-row}
+**Northern Illinois University** · Graduate Research Assistant, Microbiome & Computational Biology · DeKalb, IL
+[Aug 2020 – May 2023]{.meta}
+:::
+
+- Built an end-to-end Python/R pipeline for 16S rRNA soil microbiome data, forming the basis of my M.Sc. thesis.
+- Applied machine learning and network analysis to link microbial community composition to prairie restoration practices.
+- Supervised undergraduate and graduate researchers and taught introductory biology laboratory sections.
+
+### Earlier laboratory and industry experience
+
+- **Diversigen (OraSure Technologies)**, Genomics Lab Technologist, 2020: microbial DNA extraction, PCR, and NGS library prep for clinical microbiome studies.
+- **Bio-Techne**, Cell Culture Research Associate, 2019–2020: growth optimization for NS0, CHO, and HEK cell lines.
+- **Perrigo**, Quality Control Chemist, 2018–2019: HPLC, GC, UV, and FT-IR analysis under FDA/GMP requirements.
+
+## Education
+
+::: {.cv-row}
+**M.Sc., Biological Sciences & Bioinformatics** · Northern Illinois University
+[2023]{.meta}
+:::
+[Thesis: *The role of machine learning and network analyses in understanding microbial composition in an experimental prairie.*]{.meta}
+
+::: {.cv-row}
+**M.Sc., Computer Science** · Northern Illinois University
+[2022]{.meta}
+:::
+
+::: {.cv-row}
+**B.Sc., Biological & Biomedical Sciences** · Minnesota State University, Mankato
+[2017]{.meta}
+:::
+
+## Skills
+
+**Machine learning.** Deep learning (VAEs, autoencoders, transformers); single-cell foundation models (scVI, scGPT, Geneformer, Cell2Sentence); representation learning, batch correction, transfer learning; XGBoost, random forests, SVM, regularized regression; clustering, PCA/UMAP; model evaluation and interpretability (SHAP).
+
+**Frameworks.** PyTorch, scikit-learn, Hugging Face Transformers, scanpy, scvi-tools, Seurat, DESeq2, limma, edgeR, WGCNA, QIIME 2, pandas, NumPy, tidyverse.
+
+**Genomics data.** Bulk RNA-seq, scRNA-seq, snRNA-seq, CITE-seq, ATAC-seq, spatial transcriptomics, CRISPR screens, WGS/WES, DNA methylation, CNV, 16S rRNA.
+
+**Engineering.** Python, R, SQL, Bash, Java; Nextflow, Snakemake, WDL; Docker, Git; Slurm/HPC, AWS, GCP.
+
+**Communication.** R Shiny, D3.js, interactive dashboards, technical writing, presenting to bench and clinical scientists.

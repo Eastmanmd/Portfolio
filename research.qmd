@@ -1,0 +1,58 @@
+---
+title: "Research"
+description: "Machine learning methods for transcriptomics, applied to neurodegeneration and cancer."
+---
+
+My work sits between method development and applied genomics. I build and benchmark machine learning methods, especially single-cell foundation models, and apply them in large collaborative studies of disease.
+
+::: {.entry}
+[Current focus]{.eyebrow}
+
+### Single-cell foundation models for deconvolution
+
+Bulk RNA-seq is cheap and abundant, but it averages over many cell types. Deconvolution estimates the cell-type proportions inside each bulk sample. Existing methods are sensitive to batch effects, donor-level variation, and the choice of marker genes.
+
+At NYGC, I helped build **DECONVersation** with fellow researchers, framing deconvolution as a new task for single-cell foundation models. It builds signature matrices from Geneformer, Cell2Sentence, scGPT, and CellHermes embeddings, then solves for proportions in embedding space. Across real bulk datasets with ground truth, it performs on par with or better than MuSiC, DWLS, and BayesPrism, and fine-tuning improves every model tested. A side result: deconvolution turns out to be a useful benchmark for comparing foundation models.
+
+I also benchmark foundation models against established baselines (scVI, Harmony, PCA) for batch correction and representation learning. These benchmarks inform how our group chooses models for single-cell pipelines.
+
+[[Preprint](https://doi.org/10.64898/2026.10.02.756356) [Code](https://github.com/nygenome/DECONVersation) [Posters](publications.qmd#talks)]{.links}
+:::
+
+::: {.entry}
+[Neurodegeneration]{.eyebrow}
+
+### Transcriptomics of ALS across the nervous system
+
+The NYGC ALS Consortium combines whole-genome sequencing and post-mortem tissue RNA-seq from donors contributed by medical centers across five countries. I lead the transcriptomic analysis. This covers differential expression between ALS and control tissue across brain and spinal cord regions, and deconvolution to track shifts in cell-type composition. It also links expression to clinical features such as *C9orf72* repeat expansion, site of onset, and disease duration.
+
+To make the data usable without code, I built the **ALS Gene Browser**, a public app for exploring these results.
+
+[[Preprint](https://doi.org/10.64898/2026.04.29.26350889) [ALS Gene Browser](https://alsbrowser.nygenome.org/)]{.links}
+:::
+
+::: {.entry}
+[Cancer genomics]{.eyebrow}
+
+### Ancestry and tumor biology in underrepresented populations
+
+Large cancer genomics resources are dominated by patients of European ancestry. I contribute to NYGC studies that profile tumors from ancestrally diverse cohorts using matched whole-genome and transcriptome sequencing:
+
+- **Polyethnic-1000**: tumor-normal genomes across eight cancer types from patients in New York, mostly of non-European ancestry.
+- **SAMBAI** (Cancer Grand Challenges): integrated genome and transcriptome analysis of an African ancestry-enriched breast cancer cohort, separating the effects of genetic ancestry from clinical factors on gene expression (first-author poster, AACR 2026).
+- **High-grade endometrial cancer**: transcriptome-based deconvolution of the tumor microenvironment.
+- **Prostate cancer**: phylogenetic analysis of lineage plasticity in metastatic castration-resistant disease.
+
+[[Publications](publications.qmd)]{.links}
+:::
+
+::: {.entry}
+[Earlier work]{.eyebrow}
+
+### Multi-omic machine learning in industry
+
+- **EMD Serono (Merck KGaA).** A cancer-agnostic model combining expression, DNA methylation, somatic mutations, and copy number to classify the tumor microenvironment into subtypes. Its predictions were then mapped to clinical variables such as patient survival and response to immunotherapy. I prepared the data and built the models (XGBoost, random forests, neural networks), with SHAP-based interpretation.
+- **Takeda.** Co-expression network analysis (WGCNA) of colorectal cancer subtypes, plus scRNA-seq and CITE-seq analysis of drug-treated versus vehicle cells.
+- **Max Delbrück Center.** A variational autoencoder with a maximum mean discrepancy loss for joint embedding of expression, copy number, and methylation data, and tests of how well those embeddings predict survival and drug response.
+- **Northern Illinois University.** M.Sc. thesis applying machine learning and network analysis to soil microbiome data from a long-term prairie restoration experiment.
+:::

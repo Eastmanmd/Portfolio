@@ -1,0 +1,21 @@
+---
+title: "Reviews"
+description: "In-depth reviews of new papers and tools in AI, bioinformatics, and computational biology."
+listing:
+  contents: "*/index.qmd"
+  sort: "date desc"
+  type: custom
+  template: _listing.ejs
+  categories: true
+  sort-ui: false
+  filter-ui: false   # turn on once there are several reviews
+  date-format: "MMM D, YYYY"
+  fields: [date, title, description, categories, reading-time, verdict]
+toc: false
+body-classes: ""
+---
+
+Each review takes one paper or tool apart: how it works, what is genuinely new, how well the evidence holds up, whether the code actually runs, and where it fits in a real analysis workflow. Reviews are tagged by **field** (AI, bioinformatics, computational biology) and **type** (paper, tool, benchmark).
+
+*Opinions are my own and do not represent my employer.*
+

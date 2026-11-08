@@ -1,0 +1,19 @@
+# Build output
+/_site/
+/.quarto/
+**/*.quarto_ipynb
+
+# Private source documents: never publish
+/Posters/
+*.pdf
+*.docx
+*.pptx
+!/files/Ali_Oku_CV.pdf
+/headshot.jpg
+
+# Resume copies that include the phone number: keep private
+/resume/Ali_Oku_Resume_ATS.txt
+/resume/Ali_Oku_Master_Resume.txt
+/resume/Gap_Report.txt
+
+.DS_Store

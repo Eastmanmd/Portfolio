@@ -1,0 +1,12 @@
+```{=html}
+<ul class="review-list list">
+<% for (const item of items) { %>
+<li class="review-item" <%= metadataAttrs(item) %>>
+<div class="review-meta"><span class="listing-date"><%= item.date %></span><% if (item.verdict) { %><span class="verdict verdict-<%= item.verdict.toLowerCase() %>"><%= item.verdict %></span><% } %><% if (item['reading-time']) { %><span class="listing-reading-time"><%= item['reading-time'] %></span><% } %></div>
+<div class="review-title"><a href="<%- item.path %>"><%= item.title %></a></div>
+<% if (item.description) { %><p class="review-desc"><%= item.description %></p><% } %>
+<% if (item.categories) { %><div class="review-tags"><% for (const c of item.categories) { %><span class="tag"><%= c %></span><% } %></div><% } %>
+</li>
+<% } %>
+</ul>
+```

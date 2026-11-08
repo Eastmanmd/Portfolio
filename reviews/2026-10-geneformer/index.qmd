@@ -1,0 +1,76 @@
+---
+title: "Geneformer, three years on: what a rank-based transformer actually learned"
+description: "A practitioner's review of Geneformer: the idea, the evidence, the critiques, and where it earns its place in a single-cell workflow."
+date: 2026-10-17
+draft: true
+categories: [AI, computational biology, paper]
+verdict: Read    # [ALI: Read / Skim / Skip]
+---
+
+<!--
+DRAFT. Not published until draft: false.
+Text in [ALI: ...] marks where your own judgment, results, or experience goes.
+Facts marked [verify] need checking against the source before publishing.
+-->
+
+::: {.callout-note appearance="simple"}
+## TL;DR
+[ALI: Two or three sentences. Possible angle: Geneformer's rank-value encoding was a clever idea and the model is a real asset when fine-tuned, but its zero-shot embeddings rarely beat simple baselines. Treat it as a pretrained starting point, not an off-the-shelf answer.]
+
+[Read]{.verdict .verdict-read} [ALI: confirm verdict]   **Paper:** [Theodoris et al., *Nature* 2023](https://doi.org/10.1038/s41586-023-06139-9)   **Weights:** [Hugging Face](https://huggingface.co/ctheodoris/Geneformer)
+:::
+
+## What it claims
+
+Theodoris et al. pretrained a transformer on roughly 30 million single-cell transcriptomes (Genecorpus-30M) with a masked-gene objective. The claim is that context-aware representations learned from a broad corpus transfer to downstream tasks with limited labelled data, including in network biology. Examples include predicting dosage-sensitive genes and chromatin dynamics, and running *in silico* perturbations that nominate candidate therapeutic targets. In cardiomyopathy, some of these candidates were tested experimentally.
+
+## What's actually new
+
+**Rank-value encoding.** Geneformer does not feed counts into the model. Each cell becomes a sequence of genes ranked by expression, normalized by each gene's expression across the whole corpus. Housekeeping genes that are high everywhere get pushed down, and genes that are distinctively high in a given cell move up. The model never sees absolute values, which makes it more robust to technical differences in sequencing depth.
+
+[ALI: Your view. Is rank encoding the real contribution, more than the transformer itself? What does it throw away (magnitude, lowly expressed but informative genes)?]
+
+**In silico perturbation as an interface.** Deleting or moving a gene in the rank sequence and measuring how the cell embedding shifts is an intuitive way to query the model. [ALI: How much should we trust these shifts as biology rather than model artifacts?]
+
+## How it works
+
+- **Input:** top-ranked genes per cell. The original model used 2,048 genes; later releases use a 4,096-gene input. [verify current model sizes and corpus]
+- **Architecture:** BERT-style transformer encoder, pretrained with masked gene prediction.
+- **Outputs:** gene embeddings and cell embeddings (pooled), usable zero-shot or after fine-tuning for classification.
+- **Distribution:** weights and tutorial notebooks on Hugging Face. As of writing there is no PyPI package or tagged release. ([scFM Tracker](https://eastmanmd.github.io/scFM-tracker/) has the current runnability details.)
+
+## Does it hold up?
+
+Independent evaluations have been mixed, especially for zero-shot use:
+
+- **Zero-shot embeddings.** Kedzierska et al. (*Genome Biology*, 2025) report that zero-shot Geneformer and scGPT embeddings often underperform simple baselines (highly variable genes, scVI, Harmony) for cell-type clustering and batch integration. [verify citation]
+- **Perturbation prediction.** Ahlmann-Eltze, Huber & Anders (*Nature Methods*, 2025) show that deep-learning perturbation predictors, foundation models included, do not yet beat deliberately simple linear baselines. [verify citation]
+- **Fine-tuning helps.** In my own benchmarking for [DECONVersation](../../software.qmd#deconversation), zero-shot scFM embeddings were not competitive for bulk RNA-seq deconvolution on their own. Fine-tuned Geneformer, by contrast, was consistently competitive with established methods across datasets.
+
+[ALI: Your synthesis. Where does Geneformer earn its place? Where would you reach for scVI or a linear model instead?]
+
+## Reproducibility check
+
+- **Code available:** yes (Hugging Face repository with tutorial notebooks)
+- **Weights available:** yes
+- **Pretraining corpus available:** [verify]
+- **Installed and ran it:** [ALI: environment setup, GPU requirements, time to embed a typical dataset, sharp edges such as tokenizer and gene-ID mapping or the input-size mismatch between model versions]
+- **License:** [verify]
+
+## Limitations and open questions
+
+- Rank encoding discards expression magnitude. How much does that matter for the task you have?
+- Gene vocabulary is fixed at pretraining. How does it handle genes or species outside that vocabulary?
+- Embedding quality varies with fine-tuning choices, which makes comparisons across papers hard.
+- [ALI: add your own]
+
+## Who should read it
+
+[ALI: For example: anyone using single-cell foundation models in a pipeline should read the original paper and at least one independent benchmark together.]
+
+## References
+
+1. Theodoris CV, Xiao L, Chopra A, et al. Transfer learning enables predictions in network biology. *Nature* 618, 616–624 (2023). [doi:10.1038/s41586-023-06139-9](https://doi.org/10.1038/s41586-023-06139-9)
+2. Kedzierska KZ, Crawford L, Amini AP, Lu AX. Zero-shot evaluation reveals limitations of single-cell foundation models. *Genome Biology* (2025). [verify]
+3. Ahlmann-Eltze C, Huber W, Anders S. Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines. *Nature Methods* (2025). [verify]
+4. Oku A, Geiger H, Robine N, Fu R. DECONVersation: Single cell foundation model-derived embeddings for robust cell type deconvolution of bulk RNA-seq. *bioRxiv* (2026). [doi:10.64898/2026.10.02.756356](https://doi.org/10.64898/2026.10.02.756356)

@@ -1,0 +1,203 @@
+---
+title: "Publications & Talks"
+description: "Papers, preprints, and conference presentations."
+---
+
+<!-- Talks list titles and abstracts only. Full poster files are intentionally not published. -->
+
+## Papers
+
+For the most current list, see [Google Scholar](https://scholar.google.com/citations?user=gr_Ra7AAAAAJ&hl=en).
+
+### Preprints
+
+::: {.pubs}
+1. [DECONVersation: Single cell foundation model-derived embeddings for robust cell type deconvolution of bulk RNA-seq]{.pub-title}
+   [[Oku A]{.me}, Geiger H, Robine N, Fu R]{.pub-authors}
+   [bioRxiv, 2026]{.pub-venue}\
+   [First author]{.badge-first} [DOI](https://doi.org/10.64898/2026.10.02.756356){.pill} [Code](https://github.com/nygenome/DECONVersation){.pill} [PyPI](https://pypi.org/project/DECONVersation/){.pill}
+
+1. [The New York Genome Center ALS Consortium resource integrates postmortem tissue transcriptomics and whole genome sequencing to empower biological discovery]{.pub-title}
+   [Humphrey J, [Oku A]{.me}, Byrska-Bishop M, Basile AO, Evani US, Corvelo A, et al., Phatnani H]{.pub-authors}
+   [medRxiv, 2026]{.pub-venue}\
+   [DOI](https://doi.org/10.64898/2026.04.29.26350889){.pill} [App](https://alsbrowser.nygenome.org/){.pill}
+
+1. [Comprehensive molecular characterization of high-grade endometrial cancer in an ancestrally diverse cohort]{.pub-title}
+   [Frimer M, Gee D, Goldstein ZR, Hooper WF, Founta K, Deschênes A, et al.]{.pub-authors}
+   [bioRxiv, 2026]{.pub-venue}\
+   [DOI](https://doi.org/10.64898/2026.05.01.721962){.pill}
+
+1. [A high-fidelity and ancestrally inclusive patient-derived organoid platform resolves cancer cell plasticity in uterine carcinosarcoma]{.pub-title}
+   [Subhash S, Bammert MT, Yueh B, Ozler KA, Chu T, Kramer M, Belleau P, et al.]{.pub-authors}
+   [bioRxiv, 2026]{.pub-venue}\
+   [DOI](https://doi.org/10.64898/2026.04.21.720027){.pill}
+:::
+
+### Journal articles
+
+::: {.pubs}
+1. [A complex phylogeny of lineage plasticity in metastatic castration-resistant prostate cancer]{.pub-title}
+   [Nauseef JT, Chu TR, Hooper WF, Alonso A, [Oku A]{.me}, Geiger H, et al.]{.pub-authors}
+   [npj Precision Oncology 9, 91 (2025)]{.pub-venue}\
+   [DOI](https://doi.org/10.1038/s41698-025-00854-4){.pill}
+:::
+
+### Published conference abstracts
+
+::: {.pubs}
+1. [Comprehensive molecular characterization of high-grade endometrial cancer in an ancestrally diverse cohort]{.pub-title}
+   [Chambwe N, Frimer M, Goldstein Z, Barbi M, Hooper W, Founta K, et al.]{.pub-authors}
+   [Cancer Epidemiology, Biomarkers & Prevention 34 (9 Suppl): A140 (2025)]{.pub-venue}\
+   [DOI](https://doi.org/10.1158/1538-7755.DISP25-A140){.pill}
+
+1. [Polyethnic-1000: Advancing cancer genomics by studying ethnically diverse, underserved patient populations in New York]{.pub-title}
+   [Robine N, Winterkorn L, Chu T, Goldstein Z, Hooper W, [Oku A]{.me}, Geiger HM, Davis MB, Balogun O]{.pub-authors}
+   [Cancer Epidemiology, Biomarkers & Prevention 33 (9 Suppl): C102 (2024)]{.pub-venue}\
+   [DOI](https://doi.org/10.1158/1538-7755.DISP24-C102){.pill}
+:::
+
+### Thesis
+
+::: {.pubs}
+1. [The role of machine learning and network analyses in understanding microbial composition in an experimental prairie]{.pub-title}
+   [[Oku AE]{.me}]{.pub-authors}
+   [M.Sc. thesis, Northern Illinois University (2023)]{.pub-venue}
+:::
+
+## Talks & posters {#talks}
+
+### First-author
+
+::: {.entry}
+[AI in Biology Conference · 2026]{.eyebrow}
+
+#### DECONVersation: Single cell foundation model-derived embeddings for robust cell type deconvolution of bulk RNA-seq data
+
+[**Ali Oku**, Heather Geiger, Nicolas Robine, Rui Fu · New York Genome Center]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+AI and deep learning have transformed single-cell transcriptomics, enabling unsupervised clustering, trajectory inference, cross-dataset integration, and more. Here, we propose cell type deconvolution as a novel task for single-cell foundation models (scFMs). Deconvolution of bulk RNA-seq data estimates cell type proportions cost-effectively, but existing methods remain vulnerable to batch effects, subject-level variation, and marker gene selection sensitivity.
+
+We introduce DECONVersation, which leverages embeddings from pre-trained and fine-tuned scFMs paired with standard solvers to estimate cell type proportions. scFM embeddings, trained on large diverse datasets, are inherently robust to batch effects and encode complex gene relationships without explicit marker selection. Benchmarked against MuSiC, DWLS, and BayesPrism, DECONVersation achieves comparable or superior RMSE and correlation across diverse tissues, with performance further improved by fine-tuning.
+
+</details>
+:::
+
+::: {.entry}
+[AACR Science of Cancer Health Disparities · 2026]{.eyebrow}
+
+#### Integrated whole genome and transcriptome analyses reveal ancestry-associated molecular features of breast cancer
+
+[**Ali Oku**, Tim Chu, Rachel Martini, Will Hooper, Zoe Goldstein, Heather Geiger, et al., Melissa Davis, Nicolas Robine · New York Genome Center, Morehouse School of Medicine, and SAMBAI collaborators]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+Women of African ancestry disproportionately experience aggressive breast cancer and poorer survival, yet remain substantially underrepresented in cancer genomic studies. Consequently, the contribution of inherited genetic ancestry to breast tumor biology remains poorly understood. To address this gap, we leveraged an African ancestry-enriched whole genome and transcriptome sequencing cohort to quantify how genetic ancestry contributes to genomic and transcriptomic variation in hormone receptor-positive and triple-negative breast cancer, and to separate the influence of genetic ancestry from clinical factors on breast cancer gene expression.
+
+</details>
+:::
+
+::: {.entry}
+[Machine Learning in Computational Biology (MLCB) · 2025]{.eyebrow}
+
+#### Enhancing bulk RNA-seq deconvolution using atlas-level deep learning embeddings
+
+[**Ali Oku**, Rui Fu, Heather Geiger, Will Liao, Nicolas Robine · New York Genome Center]{.meta}
+
+Also presented at the Mid-Atlantic Bioinformatics Conference, 2025.
+
+<details class="abstract"><summary>Abstract</summary>
+
+Deep learning models such as scVI, Geneformer, and Cell2Sentence have shown strong performance in single-cell RNA sequencing analysis, particularly for batch correction and cell type annotation. These models generate latent embeddings that capture meaningful biological variation while reducing technical noise. However, their application to deconvolution, the process of estimating cell type proportions from bulk RNA-seq data, remains largely unexplored. Traditional deconvolution methods such as MuSiC and BayesPrism are often sensitive to batch effects and reference quality.
+
+This study explores whether deep learning-based embeddings can improve the robustness and accuracy of deconvolution, either by serving as enhanced reference datasets or as inputs to custom-trained regressors. Our results show that foundation models, including Cell2Sentence and Geneformer, can perform on par with or outperform traditional state-of-the-art deconvolution approaches such as MuSiC, highlighting their potential for accurate estimation of cell type proportions.
+
+</details>
+:::
+
+::: {.entry}
+[RNA Symposium · 2025]{.eyebrow}
+
+#### Gene expression analysis across multiple brain and spinal cord regions in ALS patients: insights into regional variability in neurodegeneration
+
+[**Ali Oku**, Jack Humphrey, Heather Geiger, Rui Fu, et al., NYGC ALS Consortium, David A. Knowles, Hemali Phatnani, Towfique Raj · New York Genome Center, Icahn School of Medicine at Mount Sinai, Columbia University, University College London]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+Genomics has the potential to transform ALS research by identifying new genetic risk factors and uncovering novel biology, but the cost of generating data at scale can be prohibitive for individual labs. The New York Genome Center ALS Consortium is a multi-center collaboration spanning 41 contributing sites. Here we present an analysis of the transcriptomic portion of the full consortium cohort.
+
+We ask how gene expression and cell type composition differ between ALS and control samples across central nervous system tissues, using differential expression and deconvolution. Within ALS cases, we associate expression and cell type composition with *C9orf72* repeat expansion, site of symptom onset, age at onset, age at death, and disease duration.
+
+</details>
+:::
+
+### Co-authored
+
+::: {.entry}
+[Packard Center for ALS Research · 2025]{.eyebrow}
+
+#### The New York Genome Center ALS Consortium combines postmortem tissue transcriptomics with whole genome sequencing to empower biological discovery
+
+[Jack Humphrey, Anna Basile, Uday S. Evani, **Ali Oku**, Marta Byrska-Bishop, et al., Nicolas Robine, Hemali Phatnani]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+Genomics has the potential to transform ALS research by identifying new genetic risk factors and uncovering novel biology, but the cost of generating data at scale can be prohibitive for individual labs. We present the New York Genome Center ALS Consortium, a multi-center collaboration spanning 41 contributing sites with 73 participating members, combining whole genome sequencing with RNA-seq of postmortem tissue across brain and spinal cord regions. Although previous data freezes have already contributed to 16 publications, here we present an overall analysis of the full consortium cohort, including deconvolution of shifts in cell-type composition across ALS tissues.
+
+</details>
+:::
+
+::: {.entry}
+[Gordon Research Conference · 2025]{.eyebrow}
+
+#### Long-read RNA-seq of TDP-43 knockdown finds novel protein-coding isoforms
+
+[Jack Humphrey, **Ali Oku**, Alice M. Giani, Brooke Friedman, et al., NYGC ALS Consortium, David A. Knowles, Hemali Phatnani, Towfique Raj]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+Loss of nuclear TDP-43 is a hallmark of ALS and FTD. We combined short-read and Nanopore long-read RNA-seq of TDP-43 knockdown in iPSC-derived cortical-like neurons to identify novel coding and non-coding isoforms, including cryptic exons, whose usage changes with TDP-43 loss. In parallel, a meta-analysis of published single-nucleus RNA-seq from ALS and FTD cortex localizes cryptic splicing to specific neuronal populations. Together with the consortium's bulk tissue transcriptomic and genetic data, these approaches point toward new biomarkers and mechanisms for patient stratification.
+
+</details>
+:::
+
+::: {.entry}
+[AACR Science of Cancer Health Disparities · 2025]{.eyebrow}
+
+#### Comprehensive molecular characterization of high-grade endometrial cancer in an ancestrally diverse cohort
+
+[Nyasha Chambwe, Marina Frimer, Zoe Goldstein, et al., **Ali Oku**, et al., Nicolas Robine, Semir Beyaz]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+Endometrial cancer is the only gynecologic cancer in the U.S. with increasing incidence and mortality, and Black women are more often diagnosed with high-grade disease and experience worse survival. Genomic studies to date have underrepresented diverse populations, limiting insight into ancestry-associated biology that may drive clinical outcomes. We performed comprehensive genomic and transcriptomic characterization of high-grade endometrial cancer in an ancestrally diverse cohort, with a focus on patients of African descent, to determine molecular alterations that contribute to aggressive tumors. This included transcriptome-based deconvolution of tumor microenvironment composition.
+
+[Published abstract](https://doi.org/10.1158/1538-7755.DISP25-A140){.pill}
+
+</details>
+:::
+
+::: {.entry}
+[AACR Science of Cancer Health Disparities · 2024]{.eyebrow}
+
+#### Polyethnic-1000: Advancing cancer genomics by studying ethnically diverse, underserved patient populations in New York
+
+[Nicolas Robine, Lara Winterkorn, Tim Chu, Zoe Goldstein, William Hooper, **Ali Oku**, Heather Geiger, Melissa B. Davis, Onyinye Balogun · on behalf of the NYGC P-1000 Consortium]{.meta}
+
+<details class="abstract"><summary>Abstract</summary>
+
+Prompted by the considerable bias toward European ancestry cases in large cancer genomics repositories, the New York Genome Center initiated an effort to diversify the public datasets that form the foundations of current cancer research. The effort focused on eight cancer types (breast, prostate, bladder, lung, pancreatic, colon, and endometrial cancer, and multiple myeloma) with tumor-normal whole-genome and tumor transcriptome sequencing. Most samples were obtained retrospectively from clinics and hospitals in the New York region, and the majority of the cohort is predominantly of non-European ancestry. The dataset is being distributed to the scientific community in partnership with ICGC-ARGO, and its experience informs NYGC's contribution to the Cancer Grand Challenge SAMBAI, focused on breast, prostate, and pancreatic cancer in the African diaspora.
+
+[Published abstract](https://doi.org/10.1158/1538-7755.DISP24-C102){.pill}
+
+</details>
+:::
+
+::: {.entry}
+[Ecological Society of America · Montreal · 2022]{.eyebrow}
+
+#### Soil microbial community responses to prairie restoration land management practices
+
+[D. Klimek, **Ali Oku** · Northern Illinois University]{.meta}
+:::

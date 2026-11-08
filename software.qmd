@@ -1,0 +1,54 @@
+---
+title: "Software"
+description: "Open-source tools for single-cell foundation models and ALS transcriptomics."
+---
+
+::: {.entry #deconversation}
+[Python package · PyPI]{.eyebrow}
+
+### DECONVersation
+
+Deconvolution of bulk RNA-seq using embeddings from single-cell foundation models. It extracts embeddings from bulk and single-cell data, builds signature matrices from `.h5ad` references, and estimates cell-type proportions with NNLS directly in embedding space. Supported models are Geneformer, Cell2Sentence, CellHermes, and scGPT, with PCA and scVI as baselines. It also includes benchmarking (RMSE, Pearson correlation), pseudobulk generation, Geneformer fine-tuning, and attention-weight extraction.
+
+[[GitHub](https://github.com/nygenome/DECONVersation) [PyPI](https://pypi.org/project/DECONVersation/) [Preprint](https://doi.org/10.64898/2026.10.02.756356)]{.links}
+
+<span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Hugging Face</span><span class="tag">scanpy</span>
+:::
+
+::: {.entry #scfm-tracker}
+[Dashboard · updated weekly]{.eyebrow}
+
+### scFM Tracker
+
+A live index of single-cell foundation models. It scores each one on three signals that often disagree: how much it is **cited**, how much it is **downloaded and starred**, and how recently anyone **touched the code**. It also has a "runnability" score that checks whether a model is packaged, pinned, released, documented, and actively maintained. You can re-weight the leaderboard with sliders, and each weighting is a shareable link. Data comes from OpenAlex, the GitHub API, and the Hugging Face Hub.
+
+[[Live dashboard](https://eastmanmd.github.io/scFM-tracker/) [GitHub](https://github.com/Eastmanmd/scFM-tracker)]{.links}
+
+<span class="tag">Python</span><span class="tag">GitHub Actions</span><span class="tag">OpenAlex</span><span class="tag">Hugging Face API</span>
+:::
+
+::: {.entry #s2f-tracker}
+[Dashboard · updated weekly]{.eyebrow}
+
+### S2F Tracker
+
+A companion to the scFM Tracker for **sequence-to-function** models. It draws every model as a track on a shared logarithmic base-pair ruler, so you can compare input length, output resolution, and readouts side by side. Models are ranked by an adjustable tracker score built from attention, citation momentum, usage, openness, and runnability. The score measures those things, not predictive accuracy. It also has a benchmark scoreboard and a "gray zone" of related sequence models. A pipeline refreshes the data every week.
+
+[[Live dashboard](https://eastmanmd.github.io/S2F-tracker/) [GitHub](https://github.com/Eastmanmd/S2F-tracker)]{.links}
+
+<span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">GitHub Actions</span><span class="tag">OpenAlex</span><span class="tag">Hugging Face API</span>
+:::
+
+::: {.entry #als-browser}
+[R Shiny app]{.eyebrow}
+
+### ALS Gene Browser
+
+An interactive app for exploring transcriptomic data from the NYGC ALS Consortium. It shows differential gene expression across tissues, *C9orf72* status, and clinical variables in ALS and control post-mortem samples. It is built for bench and clinical researchers who want to query the data without writing code.
+
+[[Open the app](https://alsbrowser.nygenome.org/) [GitHub](https://github.com/Eastmanmd/AlsGeneBroswer) [Preprint](https://doi.org/10.64898/2026.04.29.26350889)]{.links}
+
+<span class="tag">R</span><span class="tag">Shiny</span><span class="tag">DESeq2</span>
+:::
+
+More on [GitHub](https://github.com/Eastmanmd).

@@ -1,0 +1,13 @@
+/*-- scss:defaults --*/
+$body-bg: #161616;
+$body-color: #f4f4f4;
+$primary: #78a9ff;
+$link-color: #78a9ff;
+$text-muted: #a8a8a8;
+$border-color: #393939;
+$code-bg: #262626;
+
+/*-- scss:rules --*/
+.verdict.verdict-read { color: #42be65; }
+.verdict.verdict-skim { color: #f1c21b; }
+.verdict.verdict-skip { color: #ff8389; }

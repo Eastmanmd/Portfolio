@@ -1,0 +1,6 @@
+# Applies to every review page.
+body-classes: review
+toc: true
+toc-location: right
+toc-title: "On this page"
+title-block-banner: false

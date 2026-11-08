@@ -1,0 +1,47 @@
+---
+# HOW TO USE: copy this folder to reviews/YYYY-MM-short-name/ and fill it in.
+# Folders starting with "_" are never published. Set draft: false when ready.
+title: "Model or paper name: a one-line take"
+description: "One sentence shown on the listing page."
+date: 2026-01-01
+draft: true
+categories: [AI, paper]          # field: AI | bioinformatics | computational biology
+                                 # type:  paper | tool | benchmark
+verdict: Read                    # Read | Skim | Skip (shown as a coloured badge)
+---
+
+::: {.callout-note appearance="simple"}
+## TL;DR
+Two or three sentences: what it is, whether it delivers, and who should care.
+
+[Read]{.verdict .verdict-read} [Skim]{.verdict .verdict-skim} [Skip]{.verdict .verdict-skip} ← keep one   **Paper:** [link]()   **Code:** [link]()
+:::
+
+## What it claims
+
+The authors' main claims, stated fairly and in their terms.
+
+## What's actually new
+
+The real contribution compared with prior work. What would be lost if this paper didn't exist?
+
+## How it works
+
+A short explanation of the method, aimed at a computational biologist who hasn't read the paper. One figure or diagram if it helps.
+
+## Does it hold up?
+
+Evaluation design, baselines, datasets, and leakage risks. Are the comparisons fair? What's missing?
+
+## Reproducibility check
+
+- **Code available:** yes / no
+- **Weights or data available:** yes / no
+- **Installed and ran it:** what happened, how long it took, what broke
+- **License:**
+
+## Limitations and open questions
+
+## Who should read it
+
+## References
