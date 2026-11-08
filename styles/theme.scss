@@ -11,6 +11,7 @@ $border-radius: 0;
 $border-radius-sm: 0;
 $border-radius-lg: 0;
 $navbar-bg: $body-bg;
+$grid-body-width: 1000px;
 $footer-bg: $body-bg;
 
 /*-- scss:rules --*/
@@ -26,7 +27,7 @@ $footer-bg: $body-bg;
 code, pre { font-size: 0.85em; }
 
 // ---------- Layout ----------
-#quarto-content main.content { max-width: 820px; }
+#quarto-content main.content { max-width: 1000px; }
 
 h1.title { font-size: 2.3rem; font-weight: 600; letter-spacing: -0.015em; }
 h3 { font-size: 1.15rem; margin-top: 1.75rem; font-weight: 600; }
@@ -259,7 +260,7 @@ details.abstract {
   &.verdict-skip { color: #da1e28; }
 }
 
-body.review #quarto-content main.content { max-width: 680px; }
+body.review #quarto-content main.content { max-width: 760px; }
 
 .review-list {
   list-style: none;
@@ -277,4 +278,33 @@ body.review #quarto-content main.content { max-width: 680px; }
 .cv-row {
   margin-top: 1.4rem;
   p { margin-bottom: 0.2rem; }
+}
+
+// ---------- Home: three columns on wide screens (profile | bio | work, focus, reviews) ----------
+body.home #quarto-content main.content {
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1200px) {
+  body.home {
+    .quarto-about-trestles .about-entity { flex: 0 0 24%; }
+    .about-contents main.content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: 2.25rem;
+      align-items: start;
+    }
+    .home-bio { grid-column: 1; grid-row: 1; }
+    .home-bio > p:first-child { margin-top: 0; }
+    .home-side {
+      grid-column: 2;
+      grid-row: 1;
+      border-left: 1px solid $border-color;
+      padding-left: 2.25rem;
+      h2:first-child { margin-top: 0; }
+      // Compact review list here; full descriptions live on the Reviews page.
+      .review-desc, .review-tags { display: none; }
+    }
+  }
 }

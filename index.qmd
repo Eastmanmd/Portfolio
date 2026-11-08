@@ -2,6 +2,8 @@
 title: "Ali Oku"
 subtitle: "Senior Bioinformatics Analyst · New York Genome Center"
 pagetitle: "Ali Oku"
+page-layout: full
+body-classes: home
 image: images/headshot.jpg
 image-alt: "Portrait of Ali Oku"
 listing:
@@ -83,6 +85,8 @@ about:
 </script>
 ```
 
+:::: {.home-bio}
+
 I'm a Senior Bioinformatics Analyst at the [New York Genome Center](https://www.nygenome.org), working on transcriptomics across cancer, neurodegeneration, and autoimmune disease. I partner with researchers at NYGC and beyond to design studies, analyze data, and bring machine learning into their work.
 
 My current research interests center on what **single-cell foundation models** (scFMs) are actually good for. At NYGC, I helped build [DECONVersation](software.qmd#deconversation) with fellow researchers, a method that uses scFM embeddings to estimate cell-type proportions from bulk RNA-seq.
@@ -92,6 +96,10 @@ I lead transcriptomic analysis for the NYGC ALS Consortium, comparing gene expre
 Before NYGC, I built machine learning models in pharma and academia: a cancer-agnostic tumor-microenvironment classifier linked to survival and immunotherapy response at **EMD Serono**, single-cell and network analyses at **Takeda**, and multi-omic autoencoders at the **Max Delbrück Center**. I hold M.Sc. degrees in Computer Science and Bioinformatics.
 
 I also write [reviews](reviews/index.qmd) of new work in AI and computational biology.
+
+::::
+
+:::: {.home-side}
 
 ## Selected work
 
@@ -124,3 +132,5 @@ I also write [reviews](reviews/index.qmd) of new work in AI and computational bi
 :::
 
 [All reviews →](reviews/index.qmd)
+
+::::
